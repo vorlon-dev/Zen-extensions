@@ -1,0 +1,42 @@
+{
+  "name": "zen-jiosaavn",
+  "displayName": "JioSaavn",
+  "version": "1.0.0",
+  "description": "Search and download JioSaavn tracks up to AAC 320 kbps, with album, playlist, artist metadata and a home feed. Media URLs are decrypted with the standard JioSaavn web-player key.",
+  "author": "vorlon-dev",
+  "homepage": "https://github.com/vorlon-dev/Zen-extensions",
+  "icon": "icon.png",
+  "type": ["metadata_provider", "download_provider"],
+  "minAppVersion": "4.2.0",
+  "requiredRuntimeFeatures": ["preparedContext@1"],
+  "permissions": {
+    "network": ["www.jiosaavn.com", "aac.saavncdn.com", "c.saavncdn.com", "i.imgur.com"],
+    "storage": true
+  },
+  "qualityOptions": [
+    {"id": "AAC_320", "kind": "lossy", "label": "AAC 320 kbps", "description": "Highest quality JioSaavn offers"},
+    {"id": "AAC_160", "kind": "lossy", "label": "AAC 160 kbps", "description": "Good quality, smaller files"},
+    {"id": "AAC_96", "kind": "lossy", "label": "AAC 96 kbps", "description": "Data saver"},
+    {"id": "AAC_48", "kind": "lossy", "label": "AAC 48 kbps", "description": "Low quality"},
+    {"id": "AAC_12", "kind": "lossy", "label": "AAC 12 kbps", "description": "Lowest bitrate"}
+  ],
+  "capabilities": {"homeFeed": true, "downloadFallbackTier": "low_res"},
+  "searchBehavior": {
+    "enabled": true,
+    "placeholder": "Search JioSaavn...",
+    "filters": [
+      {"id": "tracks", "label": "Songs", "icon": "music"},
+      {"id": "albums", "label": "Albums", "icon": "album"},
+      {"id": "playlists", "label": "Playlists", "icon": "playlist"},
+      {"id": "artists", "label": "Artists", "icon": "artist"}
+    ]
+  },
+  "urlHandler": {
+    "enabled": true,
+    "patterns": ["jiosaavn.com/song/", "jiosaavn.com/album/", "jiosaavn.com/artist/", "jiosaavn.com/playlist/", "jiosaavn.com/s/playlist/", "jiosaavn.com/featured/"]
+  },
+  "settings": [
+    {"key": "lang", "label": "Languages", "type": "string", "default": "english", "description": "Comma-separated languages for the home feed"},
+    {"key": "clear_cache", "label": "Clear Cache", "type": "button", "description": "Remove all cached data", "action": "forceCleanup"}
+  ]
+}

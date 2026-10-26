@@ -1,0 +1,39 @@
+{
+  "name": "zen-ytmusic",
+  "displayName": "YouTube Music",
+  "version": "1.0.0",
+  "description": "YouTube Music provider with song/video/album/artist/playlist search and metadata, home feed, and direct audio stream resolution using the same innertube clients as ZenMusic.",
+  "author": "vorlon-dev",
+  "homepage": "https://github.com/vorlon-dev/Zen-extensions",
+  "icon": "icon.png",
+  "type": ["metadata_provider", "download_provider"],
+  "minAppVersion": "4.2.0",
+  "permissions": {
+    "network": ["music.youtube.com", "yt3.googleusercontent.com", "i.ytimg.com"],
+    "storage": true
+  },
+  "qualityOptions": [
+    {"id": "AUDIO_HIGH", "kind": "lossy", "label": "High (up to 256 kbps)", "description": "Best available AAC/Opus stream"},
+    {"id": "AUDIO_MED", "kind": "lossy", "label": "Medium (128 kbps)", "description": "Balanced quality and size"},
+    {"id": "AUDIO_LOW", "kind": "lossy", "label": "Low (70 kbps)", "description": "Data saver"}
+  ],
+  "capabilities": {"homeFeed": true},
+  "searchBehavior": {
+    "enabled": true,
+    "placeholder": "Search YouTube Music...",
+    "filters": [
+      {"id": "tracks", "label": "Songs", "icon": "music"},
+      {"id": "videos", "label": "Videos", "icon": "video"},
+      {"id": "albums", "label": "Albums", "icon": "album"},
+      {"id": "artists", "label": "Artists", "icon": "artist"},
+      {"id": "playlists", "label": "Playlists", "icon": "playlist"}
+    ]
+  },
+  "urlHandler": {
+    "enabled": true,
+    "patterns": ["music.youtube.com/watch?v=", "music.youtube.com/playlist?list=", "music.youtube.com/channel/", "www.youtube.com/watch?v=", "youtu.be/"]
+  },
+  "settings": [
+    {"key": "clear_cache", "label": "Clear Cache", "type": "button", "description": "Drop cached metadata and visitor tokens", "action": "forceCleanup"}
+  ]
+}

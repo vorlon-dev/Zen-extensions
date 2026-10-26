@@ -1,0 +1,34 @@
+{
+  "name": "zen-spotify",
+  "displayName": "Spotify",
+  "version": "1.0.0",
+  "description": "Spotify metadata and search provider: full catalog search (tracks, albums, artists, playlists), complete track/album/artist/playlist details, ISRC and duration matching fields for cross-provider lossless downloads, URL imports and a home feed. Audio delivery stays with the app's configured download providers.",
+  "author": "vorlon-dev",
+  "homepage": "https://github.com/vorlon-dev/Zen-extensions",
+  "icon": "icon.png",
+  "type": ["metadata_provider"],
+  "minAppVersion": "4.2.0",
+  "permissions": {
+    "network": ["open.spotify.com", "api.spotify.com", "i.scdn.co", "audio-ssl.itunes.apple.com"],
+    "storage": true
+  },
+  "capabilities": {"homeFeed": true},
+  "searchBehavior": {
+    "enabled": true,
+    "placeholder": "Search Spotify...",
+    "filters": [
+      {"id": "tracks", "label": "Songs", "icon": "music"},
+      {"id": "albums", "label": "Albums", "icon": "album"},
+      {"id": "playlists", "label": "Playlists", "icon": "playlist"},
+      {"id": "artists", "label": "Artists", "icon": "artist"}
+    ]
+  },
+  "urlHandler": {
+    "enabled": true,
+    "patterns": ["open.spotify.com/track/", "open.spotify.com/album/", "open.spotify.com/playlist/", "open.spotify.com/artist/", "spotify:track:", "spotify:album:", "spotify:playlist:", "spotify:artist:"]
+  },
+  "settings": [
+    {"key": "market", "label": "Market", "type": "string", "default": "IN", "description": "Two-letter market code for availability (IN, US, GB...)"},
+    {"key": "clear_cache", "label": "Clear Cache", "type": "button", "description": "Drop cached metadata and tokens", "action": "forceCleanup"}
+  ]
+}

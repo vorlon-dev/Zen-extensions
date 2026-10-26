@@ -1,0 +1,16 @@
+Zen-extensions — extension store for Zen Music and compatible apps
+
+Providers included:
+  * zen-qobuz-lossless — backed by the Zen Music qobuz-api instance
+    (https://justfreefun.antideploy.app, project: Anattana-Labs/qobuz-api).
+    Serves FLAC (up to 24-bit/192 kHz) and MP3 320 streams.
+  * zen-ytmusic — YouTube Music metadata & audio streams via the public
+    innertube endpoints (client identity matches the ZenMusic app).
+  * zen-jiosaavn — JioSaavn web API; encrypted media URLs are decrypted
+    with the standard web-player DES key (ECB, "38346591").
+  * zen-spotify — Spotify metadata/search via the anonymous web-embed
+    credential and public /embed pages. Metadata only; no streams.
+
+All provider code in sources/ is original work for this repository.
+YouTube, YouTube Music, Spotify, JioSaavn and Qobuz are trademarks of
+their respective owners; this project is not affiliated with any of them.

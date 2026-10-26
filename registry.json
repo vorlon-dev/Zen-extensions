@@ -1,0 +1,98 @@
+{
+  "version": 1,
+  "updated_at": "2026-10-26T00:00:00Z",
+  "extensions": [
+    {
+      "id": "zen-qobuz-lossless",
+      "name": "zen-qobuz-lossless",
+      "display_name": "Zen Qobuz Lossless",
+      "version": "1.0.0",
+      "description": "Lossless FLAC/MP3 download provider backed by the Zen Music Qobuz API. Resolves any YouTube Music track to its Qobuz studio-master match and serves Hi-Res Max (24-bit/192kHz), Hi-Res 96, Lossless CD or MP3 320 streams with an automatic downward tier-fallback ladder.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-qobuz-lossless.sflx",
+      "sha256": "2b45d27bbbba0a80b8b31b46e25b3258e6fbca309e25b5414cb1ef9304c9a1fd",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-qobuz-lossless.png",
+      "category": "download",
+      "tags": [
+        "qobuz",
+        "lossless",
+        "flac",
+        "hires",
+        "hifi",
+        "download",
+        "zen"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.2.0"
+    },
+    {
+      "id": "zen-ytmusic",
+      "name": "zen-ytmusic",
+      "display_name": "YouTube Music",
+      "version": "1.0.0",
+      "description": "YouTube Music provider with song/video/album/artist/playlist search and metadata, home feed, and direct audio stream resolution using the same innertube clients as ZenMusic.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-ytmusic.sflx",
+      "sha256": "5ca2f8cdc077c7931ae5a6852a50487076e6b323543ef93e68d59bb686ddb2f8",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-ytmusic.png",
+      "category": "download",
+      "tags": [
+        "youtube",
+        "ytmusic",
+        "metadata",
+        "search",
+        "homefeed",
+        "download",
+        "zen"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.2.0"
+    },
+    {
+      "id": "zen-jiosaavn",
+      "name": "zen-jiosaavn",
+      "display_name": "JioSaavn",
+      "version": "1.0.0",
+      "description": "Search and download JioSaavn tracks up to AAC 320 kbps, with album, playlist, artist metadata and a home feed. Media URLs are decrypted with the standard JioSaavn web-player key.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-jiosaavn.sflx",
+      "sha256": "c8387f6e5d6fa9e66123d3c0df14541e324883e4d8cc2a8f88e8e5ec28e99a91",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-jiosaavn.png",
+      "category": "download",
+      "tags": [
+        "jiosaavn",
+        "indian",
+        "aac",
+        "metadata",
+        "search",
+        "homefeed",
+        "download",
+        "zen"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.2.0"
+    },
+    {
+      "id": "zen-spotify",
+      "name": "zen-spotify",
+      "display_name": "Spotify",
+      "version": "1.0.0",
+      "description": "Spotify metadata and search provider: full catalog search (tracks, albums, artists, playlists), complete track/album/artist/playlist details, ISRC and duration matching fields for cross-provider lossless downloads, URL imports and a home feed. Audio delivery stays with the app's configured download providers.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-spotify.sflx",
+      "sha256": "460bdde3de84db707792276f008c29d9b77f82ceaafed0c16c7bbcc1e1baf5ff",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-spotify.png",
+      "category": "integration",
+      "tags": [
+        "spotify",
+        "metadata",
+        "search",
+        "homefeed",
+        "integration",
+        "zen"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.2.0"
+    }
+  ]
+}

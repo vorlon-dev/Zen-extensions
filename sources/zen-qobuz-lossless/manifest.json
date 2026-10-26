@@ -1,0 +1,38 @@
+{
+  "name": "zen-qobuz-lossless",
+  "displayName": "Zen Qobuz Lossless",
+  "version": "1.0.0",
+  "description": "Lossless FLAC/MP3 download provider backed by the Zen Music Qobuz API. Resolves any YouTube Music track to its Qobuz studio-master match and serves Hi-Res Max (24-bit/192kHz), Hi-Res 96, Lossless CD or MP3 320 streams with an automatic downward tier-fallback ladder.",
+  "author": "vorlon-dev",
+  "homepage": "https://github.com/vorlon-dev/Zen-extensions",
+  "icon": "icon.png",
+  "type": ["metadata_provider", "download_provider"],
+  "minAppVersion": "4.2.0",
+  "permissions": {
+    "network": ["justfreefun.antideploy.app", "music.youtube.com", "i.ytimg.com"],
+    "storage": true
+  },
+  "qualityOptions": [
+    {"id": "flac_hires_192", "kind": "lossless", "label": "Hi-Res Max", "description": "FLAC 24-bit / up to 192 kHz — studio master"},
+    {"id": "flac_hires_96", "kind": "lossless", "label": "Hi-Res Lossless", "description": "FLAC 24-bit / up to 96 kHz"},
+    {"id": "flac_cd", "kind": "lossless", "label": "Lossless CD", "description": "FLAC 16-bit / 44.1 kHz — CD quality"},
+    {"id": "mp3_320", "kind": "lossy", "label": "MP3 320 kbps", "description": "Compressed — lightest on data"}
+  ],
+  "capabilities": {"downloadFallbackTier": "low_res"},
+  "searchBehavior": {
+    "enabled": true,
+    "placeholder": "Search lossless...",
+    "filters": [
+      {"id": "tracks", "label": "Songs", "icon": "music"}
+    ]
+  },
+  "urlHandler": {
+    "enabled": true,
+    "patterns": ["music.youtube.com/watch?v=", "music.youtube.com/playlist?list=", "www.youtube.com/watch?v=", "youtu.be/"]
+  },
+  "settings": [
+    {"key": "endpoint", "label": "Lossless API endpoint", "type": "string", "default": "https://justfreefun.antideploy.app", "description": "Base URL of the Zen Music qobuz-api instance (change only if you redeploy it)"},
+    {"key": "tier", "label": "Preferred quality", "type": "select", "default": "flac_hires_192", "options": ["flac_hires_192", "flac_hires_96", "flac_cd", "mp3_320"], "description": "Highest tier to request; the ladder only ever walks DOWN, never up"},
+    {"key": "clear_cache", "label": "Clear Cache", "type": "button", "description": "Drop all cached resolutions", "action": "forceCleanup"}
+  ]
+}
