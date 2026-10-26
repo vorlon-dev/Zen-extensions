@@ -1,0 +1,10 @@
+Zen Lossless (Qobuz) Extension
+Copyright (C) 2026 ZenMusic contributors
+
+This extension is distributed under the GNU General Public License v3.0
+(see LICENSE and COPYING). It is part of the ZenMusic extension pack and
+bridges the ZenMusic qobuz-api backend (https://github.com/vorlon-dev/Zen-music).
+
+Bundled extension packages (ytmusic-spotiflac, spotify-web, jiosaavn,
+qobuz-web) are the work of their respective upstream authors and keep
+their original licenses (GPL-3.0, see THIRD-PARTY.md).

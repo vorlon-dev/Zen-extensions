@@ -1,0 +1,91 @@
+{
+  "name": "zen-lossless",
+  "displayName": "Zen Lossless (Qobuz)",
+  "version": "1.0.0",
+  "description": "True lossless FLAC and Hi-Res streaming powered by the ZenMusic Qobuz API. Matches any track to YouTube Music, resolves it against the Qobuz catalog and hands back direct FLAC / MP3 streams up to 24-Bit studio masters.",
+  "author": "ZenMusic (vorlon-dev)",
+  "homepage": "https://github.com/vorlon-dev/Zen-music",
+  "icon": "icon.png",
+  "type": ["metadata_provider", "download_provider"],
+  "minAppVersion": "4.2.0",
+  "requiredRuntimeFeatures": ["preparedContext@1"],
+  "permissions": {
+    "network": [
+      "justfreefun.antideploy.app",
+      "music.youtube.com",
+      "www.youtube.com",
+      "*.youtube.com",
+      "i.ytimg.com",
+      "*.googlevideo.com",
+      "streaming-qobuz-std.akamaized.net",
+      "*.akamaized.net",
+      "*.qobuz.com"
+    ],
+    "storage": true,
+    "file": true
+  },
+  "qualityOptions": [
+    {
+      "id": "HI_RES_MAX",
+      "label": "Hi-Res Max (24-Bit / 192 kHz)",
+      "description": "Studio master when the Qobuz catalog has it, walks down automatically",
+      "kind": "lossless"
+    },
+    {
+      "id": "HI_RES",
+      "label": "Hi-Res Lossless (24-Bit / 96 kHz)",
+      "description": "24-bit Qobuz tier",
+      "kind": "lossless"
+    },
+    {
+      "id": "LOSSLESS",
+      "label": "Lossless CD (16-Bit / 44.1 kHz)",
+      "description": "Standard Qobuz FLAC tier",
+      "kind": "lossless"
+    },
+    {
+      "id": "MP3_320",
+      "label": "MP3 320 kbps",
+      "description": "Compressed tier, lightest on data",
+      "kind": "lossy"
+    }
+  ],
+  "capabilities": {
+    "downloadFallbackTier": "lossless",
+    "networkTimeoutSeconds": 15
+  },
+  "searchBehavior": {
+    "enabled": true,
+    "primary": false,
+    "placeholder": "Search Zen Lossless...",
+    "thumbnailRatio": "square",
+    "filters": [
+      {"id": "tracks", "label": "Songs", "icon": "music"}
+    ]
+  },
+  "urlHandler": {
+    "enabled": true,
+    "patterns": [
+      "music.youtube.com",
+      "youtu.be",
+      "www.youtube.com/watch"
+    ]
+  },
+  "settings": [
+    {
+      "key": "endpoint",
+      "label": "Qobuz API endpoint",
+      "type": "string",
+      "default": "https://justfreefun.antideploy.app/",
+      "description": "Base URL of your ZenMusic qobuz-api instance. It is called as GET {endpoint}?id=<youtubeVideoId>."
+    },
+    {
+      "key": "logLevel",
+      "label": "Log Level",
+      "type": "select",
+      "default": "warn",
+      "options": ["error", "warn", "info", "debug"],
+      "description": "Extension logging verbosity."
+    }
+  ]
+}

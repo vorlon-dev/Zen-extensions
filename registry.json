@@ -3,37 +3,13 @@
   "updated_at": "2026-10-26T00:00:00Z",
   "extensions": [
     {
-      "id": "zen-qobuz-lossless",
-      "name": "zen-qobuz-lossless",
-      "display_name": "Zen Qobuz Lossless",
-      "version": "1.0.0",
-      "description": "Lossless FLAC/MP3 download provider backed by the Zen Music Qobuz API. Resolves any YouTube Music track to its Qobuz studio-master match and serves Hi-Res Max (24-bit/192kHz), Hi-Res 96, Lossless CD or MP3 320 streams with an automatic downward tier-fallback ladder.",
-      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-qobuz-lossless.sflx",
-      "sha256": "2b45d27bbbba0a80b8b31b46e25b3258e6fbca309e25b5414cb1ef9304c9a1fd",
-      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-qobuz-lossless.png",
-      "category": "download",
-      "tags": [
-        "qobuz",
-        "lossless",
-        "flac",
-        "hires",
-        "hifi",
-        "download",
-        "zen"
-      ],
-      "downloads": 0,
-      "updated_at": "2026-10-26T00:00:00Z",
-      "min_app_version": "4.2.0"
-    },
-    {
-      "id": "zen-ytmusic",
-      "name": "zen-ytmusic",
+      "id": "ytmusic-spotiflac",
+      "name": "ytmusic-spotiflac",
       "display_name": "YouTube Music",
-      "version": "1.0.0",
-      "description": "YouTube Music provider with song/video/album/artist/playlist search and metadata, home feed, and direct audio stream resolution using the same innertube clients as ZenMusic.",
-      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-ytmusic.sflx",
-      "sha256": "5ca2f8cdc077c7931ae5a6852a50487076e6b323543ef93e68d59bb686ddb2f8",
-      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-ytmusic.png",
+      "version": "2.4.4",
+      "description": "YouTube Music metadata and download provider with native album, artist, explicit, release, and song-credit metadata plus validated catalog enrichment.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/extensions/ytmusic-spotiflac.sflx",
+      "sha256": "bf88cf556df132402c4235a2660e941e7135c6d052a4aa204f8a51cd812f8c1e",
       "category": "download",
       "tags": [
         "youtube",
@@ -41,58 +17,96 @@
         "metadata",
         "search",
         "homefeed",
-        "download",
-        "zen"
+        "download"
       ],
       "downloads": 0,
       "updated_at": "2026-10-26T00:00:00Z",
-      "min_app_version": "4.2.0"
+      "min_app_version": "4.5.1",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/icons/ytmusic-spotiflac.jpg"
     },
     {
-      "id": "zen-jiosaavn",
-      "name": "zen-jiosaavn",
-      "display_name": "JioSaavn",
-      "version": "1.0.0",
-      "description": "Search and download JioSaavn tracks up to AAC 320 kbps, with album, playlist, artist metadata and a home feed. Media URLs are decrypted with the standard JioSaavn web-player key.",
-      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-jiosaavn.sflx",
-      "sha256": "c8387f6e5d6fa9e66123d3c0df14541e324883e4d8cc2a8f88e8e5ec28e99a91",
-      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-jiosaavn.png",
-      "category": "download",
-      "tags": [
-        "jiosaavn",
-        "indian",
-        "aac",
-        "metadata",
-        "search",
-        "homefeed",
-        "download",
-        "zen"
-      ],
-      "downloads": 0,
-      "updated_at": "2026-10-26T00:00:00Z",
-      "min_app_version": "4.2.0"
-    },
-    {
-      "id": "zen-spotify",
-      "name": "zen-spotify",
-      "display_name": "Spotify",
-      "version": "1.0.0",
-      "description": "Spotify metadata and search provider: full catalog search (tracks, albums, artists, playlists), complete track/album/artist/playlist details, ISRC and duration matching fields for cross-provider lossless downloads, URL imports and a home feed. Audio delivery stays with the app's configured download providers.",
-      "download_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/extensions/zen-spotify.sflx",
-      "sha256": "460bdde3de84db707792276f008c29d9b77f82ceaafed0c16c7bbcc1e1baf5ff",
-      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/Zen-extensions/main/icons/zen-spotify.png",
+      "id": "spotify-web",
+      "name": "spotify-web",
+      "display_name": "Spotify Web",
+      "version": "1.10.2",
+      "description": "Spotify metadata provider for SpotiFLAC Mobile with complete native release, disc, catalog ID, credits, and artwork metadata plus guarded genre enrichment.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/extensions/spotify-web.sflx",
+      "sha256": "26f4f8de8efae21d4668cac07e57e82965d796c36c9534ee6828c6efba67f81e",
       "category": "integration",
       "tags": [
         "spotify",
-        "metadata",
-        "search",
-        "homefeed",
-        "integration",
-        "zen"
+        "web",
+        "streaming",
+        "homefeed"
       ],
       "downloads": 0,
       "updated_at": "2026-10-26T00:00:00Z",
-      "min_app_version": "4.2.0"
+      "min_app_version": "4.3.0",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/icons/spotify-web.png"
+    },
+    {
+      "id": "jiosaavn",
+      "name": "jiosaavn",
+      "display_name": "JioSaavn",
+      "version": "1.0.8",
+      "description": "Search and download JioSaavn AAC tracks, browse albums, playlists, artists, and the home feed.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/extensions/jiosaavn.sflx",
+      "sha256": "be9a231337d7c2b8145c806c5a72f2f1052691ff830c612ac2a0d4e344ec0a92",
+      "category": "download",
+      "tags": [
+        "jiosaavn",
+        "metadata",
+        "search",
+        "homefeed",
+        "download"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.9.5",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/icons/jiosaavn.png"
+    },
+    {
+      "id": "qobuz-web",
+      "name": "qobuz-web",
+      "display_name": "Qobuz",
+      "version": "1.2.23",
+      "description": "Qobuz metadata and download provider for Mornye with resilient album search and track recovery, complete release metadata, credits, multi-disc totals, and original artwork.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/extensions/qobuz-web.sflx",
+      "sha256": "054c1d2c40058b49f5ade17a64442014ddf05944663a12c790a17d63ee99985f",
+      "category": "download",
+      "tags": [
+        "qobuz",
+        "download",
+        "lossless",
+        "metadata",
+        "search"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.9.1",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/icons/qobuz-web.png"
+    },
+    {
+      "id": "zen-lossless",
+      "name": "zen-lossless",
+      "display_name": "Zen Lossless (Qobuz)",
+      "version": "1.0.0",
+      "description": "True lossless FLAC and Hi-Res streaming powered by the ZenMusic Qobuz API. Matches any track to YouTube Music, resolves it against the Qobuz catalog and hands back direct FLAC / MP3 streams up to 24-Bit studio masters.",
+      "download_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/extensions/zen-lossless.sflx",
+      "sha256": "390fa7936eea4d609c439ca3370f1459dd356641e1fa019b6da3ea06882b8236",
+      "category": "download",
+      "tags": [
+        "zenmusic",
+        "qobuz",
+        "lossless",
+        "hires",
+        "flac",
+        "download"
+      ],
+      "downloads": 0,
+      "updated_at": "2026-10-26T00:00:00Z",
+      "min_app_version": "4.2.0",
+      "icon_url": "https://raw.githubusercontent.com/vorlon-dev/zen-extensions/main/icons/zen-lossless.png"
     }
   ]
 }
